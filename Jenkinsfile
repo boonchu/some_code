@@ -9,7 +9,8 @@ pipeline {
 
     stage('echo-again') {
       steps {
-        sh '"hello world"'
+        sh '''chmod +x ./testscript.sh
+./testscript.sh'''
       }
     }
 
