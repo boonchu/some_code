@@ -9,7 +9,7 @@ pipeline {
     stage('echo-again') {
       steps {
         sh '''chmod +x ./testscript.sh
-./testscript.sh'''
+        ./testscript.sh'''
       }
     }
     stage('echo-final') {
