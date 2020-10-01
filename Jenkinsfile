@@ -6,16 +6,19 @@ pipeline {
         echo 'hello from Boonchu!'
       }
     }
-
     stage('echo-again') {
       steps {
         sh '''chmod +x ./testscript.sh
 ./testscript.sh'''
       }
     }
-
+    stage('echo-final') {
+      stes {
+        echo 'finally, hello to job!'
+      }
+    }
   }
   triggers {
-    cron('H/15 * * * *')
+    cron('H/5 * * * *')
   }
 }
