@@ -13,7 +13,7 @@ pipeline {
       }
     }
     stage('echo-final') {
-      stes {
+      steps {
         echo 'finally, hello to job!'
       }
     }
